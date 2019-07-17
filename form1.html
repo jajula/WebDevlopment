@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Demo example</title>
+    <style>
+    input[required]:focus{
+
+        background: red;
+        border-width:10px; 
+        border: 5px solid olive;
+        
+    }
+     #div1{
+        border: 5px solid olive;
+        
+     }
+
+    form{
+        align-self: auto;
+    }
+    </style>
+</head>
+<body>
+    <form action="form1.html" method="get">
+    <div id = 'div1'>
+    <label for="fname">Firstname</label>
+    <input type="text" name ="fname" placeholder="Enter Firstname" required>
+    <label for="datepicker">Date of Birth</label>
+    <input type="date" name="datepicker" id="datepicker">
+    <label for="colorpicker">Color Picker</label>
+    <input type="color" name="colorpicker" id="colorpicker">
+    <label for="fname">Firstname</label>
+    <input type="text" name ="lname" placeholder="Enter Lastname" >
+    <select name="subject" id="subject">
+        <option value="physics">physics</option>
+        <option value="h">History</option>
+        <option >civics</option>
+        <option value="b">biology</option>
+    </select>
+</div>
+<div id = 'div2'>
+        <label for="fname">Firstname</label>
+        <input type="text" name ="fname" placeholder="Enter Firstname" required>
+        <label for="datepicker">Date of Birth</label>
+        <input type="date" name="datepicker" id="datepicker">
+        <label for="colorpicker">Color Picker</label>
+        <input type="color" name="colorpicker" id="colorpicker">
+        <label for="fname">Firstname</label>
+        <input type="text" name ="lname" placeholder="Enter Lastname" >
+        <select name="subject" id="subject">
+            <option value="physics">physics</option>
+            <option value="h">History</option>
+            <option >civics</option>
+            <option value="b">biology</option>
+        </select>
+    </div>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

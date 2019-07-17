@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Module2 Assignment</title>
+    <style>
+    input,label{
+
+        display: block;
+    }
+
+    .formelement:focus{
+        border-left-color: crimson;
+        border-left-style: solid;
+        border-left-width: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Information</h1>
+    <form action="Module2_Assignment.html">
+        <label for="fname">First Name</label>
+        <input type="text" name ='fname' id='fname' class="formelement" placeholder="Your Firstname...">
+        <label for="lname">Last Name</label>
+        <input type="text" name ='lname' id='lname' class="formelement" placeholder="Your Lastname...">
+        <label for="address">Address</label>
+        <Textarea rows="3" cols="30" id="address" class="formelement" name="address">Enter your address</Textarea>
+        <label for="email">Email</label>
+        <input type="email" name="email" class="formelement" id="email">
+        <label for="dob ">Date of Birth</label>
+        <input type="date" name="dob" class="formelement" id="dob" >
+        <input type="submit" value="submit" id="submit">
+        
+    </form>
+    <h1>Audio Controls</h1>
+    <audio controls autoplay>
+        <source="audio/sample1.mp3" type="audio/mpeg">
+        <source="audio/horse.ogg" type="audio/ogg">
+        Audio not supported
+    </audio>
+
+    <h1>Vedio Controls</h1>
+    <video width="320" height="240" controls>
+        <source src="video/movie.mp4" type="video/mp4">
+        <source src="video/movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+   
+  <h1>Drawing on the Canvas</h1>
+  <canvas id="mycanvas" height="500" width="500" style="border:1px solid #000000;" >
+   Your browser does not support the HTML5 canvas tag
+</canvas>
+<h1>Local Storage Demo</h1>
+<p id = 'p1'>Local Storage firstname value</p>
+<p id = 'p2'>Local Storage lastname value</p>
+<script> 
+    var can = document.getElementById("mycanvas");
+    var context = can.getContext("2d");
+    context.fillStyle = "#11aa11";
+    context.beginPath();
+    context.arc(250,250,90,0,360);
+    context.fill();
+    
+    localStorage.setItem("firstname","Venkat");
+    localStorage.setItem("lastname","jajula");
+    document.getElementById("p1").innerHTML = localStorage.getItem("firstname");
+    document.getElementById("p2").innerHTML = localStorage.getItem("lastname");
+ 
+</script>
+
+
+</body>
+</html>
